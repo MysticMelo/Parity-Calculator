@@ -12,7 +12,7 @@ createRoot(document.getElementById('root')).render(
           <Header />
           <main>
               <Routes>
-                  <Route path="/maize" element={<Maize />} />
+                  <Route path="/" element={<Maize />} />
                   <Route path="/soybeans" element={<Soybeans />} />
               </Routes>
           </main>

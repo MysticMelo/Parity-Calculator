@@ -18,7 +18,7 @@ function Header (){
             <ul>
                 <li>
                     <NavLink
-                        to="/maize"
+                        to="/"
                         className={({ isActive }) => isActive ? "active" : ""}
                     >
                         Maize 🌽
