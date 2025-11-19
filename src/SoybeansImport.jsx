@@ -14,7 +14,6 @@ function ImportCalc() {
         DEC: { ARG_FOB: 434, SAFEX: 7303, BASIS: 250, FOBBING: 200, FREIGHT: 29, TPT: 350, Days: 32 },
         MAR: { ARG_FOB: 400, SAFEX: 7330, BASIS: 150, FOBBING: 320, FREIGHT: 55, TPT: 130, Days: 120 },
         MAY: { ARG_FOB: 400, SAFEX: 7293, BASIS: 100, FOBBING: 340, FREIGHT: 55, TPT: 130, Days: 180 },
-        JUL: { ARG_FOB: 400, SAFEX: 7416, BASIS: 100, FOBBING: 340, FREIGHT: 55, TPT: 130, Days: 180 }
     });
 
     const handleImportChange = (key, value) => {
@@ -68,7 +67,7 @@ function ImportCalc() {
                 <div className={'card'} style={{width: '70%'}}>
                     <h2 className={'cardTitle'}>Import Parities</h2>
                     <ResponsiveContainer width="100%" height={400}>
-                        <LineChart data={['DEC', 'MAR', 'MAY', 'JUL'].map(month => {
+                        <LineChart data={['DEC', 'MAR', 'MAY'].map(month => {
                             const results = calculateForMonth(month);
                             return {
                                 month,
@@ -113,7 +112,7 @@ function ImportCalc() {
                                 <th style={{ padding: '12px', textAlign: 'left', borderBottom: '2px solid #cbd5e1', fontSize: '14px', fontWeight: '600', color: '#475569' }}>
                                     Metric
                                 </th>
-                                {['DEC', 'MAR', 'MAY', 'JUL'].map(month => (
+                                {['DEC', 'MAR', 'MAY'].map(month => (
                                     <th key={month} style={{ padding: '12px', textAlign: 'right', borderBottom: '2px solid #cbd5e1', fontSize: '14px', fontWeight: '600', color: '#2563eb' }}>
                                         {month}
                                     </th>
@@ -126,14 +125,14 @@ function ImportCalc() {
                                 { label: 'CIF ($/t)', key: 'CIF' },
                                 { label: 'RT (R/t)', key: 'RT' },
                                 { label: 'Hawe (R/t)', key: 'HAWE' },
-                                { label: 'SAFEX (R/t)', key: 'basisSafex' },
-                                { label: 'Final Price ($/t)', key: 'final_price' }
+                                { label: 'Import Cost (R/t)', key: 'basisSafex' },
+                                { label: 'Import Cost ($/t)', key: 'final_price' }
                             ].map((row, i) => (
                                 <tr key={row.key} style={{ background: i % 2 === 0 ? 'white' : '#f8fafc' }}>
                                     <td style={{ padding: '12px', borderBottom: '1px solid #e2e8f0', fontSize: '14px', color: '#334155' }}>
                                         {row.label}
                                     </td>
-                                    {['DEC', 'MAR', 'MAY', 'JUL'].map(month => {
+                                    {['DEC', 'MAR', 'MAY'].map(month => {
                                         const results = calculateForMonth(month);
                                         const value = results[row.key];
                                         return (
