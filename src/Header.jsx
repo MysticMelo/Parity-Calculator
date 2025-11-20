@@ -18,7 +18,7 @@ function Header (){
             <ul>
                 <li>
                     <NavLink
-                        to="/"
+                        to="/Parity-Calculator/"
                         className={({ isActive }) => isActive ? "active" : ""}
                     >
                         Maize 🌽
@@ -27,7 +27,7 @@ function Header (){
 
                 <li>
                     <NavLink
-                        to="/soybeans"
+                        to="/Parity-Calculator/soybeans"
                         className={({ isActive }) => isActive ? "active" : ""}
                     >
                         Soybeans 🌱
