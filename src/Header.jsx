@@ -19,6 +19,7 @@ function Header (){
                 <li>
                     <NavLink
                         to="/Parity-Calculator/"
+                        end
                         className={({ isActive }) => isActive ? "active" : ""}
                     >
                         Maize 🌽
