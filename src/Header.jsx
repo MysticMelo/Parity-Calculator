@@ -9,7 +9,7 @@ function Header (){
         <>
         <div className="header-container">
             <div className="header">
-                <img src="../public/Seek19.png" alt="Logo" className="logo"/>
+                <img src="https://raw.githubusercontent.com/MysticMelo/seeker/refs/heads/master/public/Seek19.png" alt="Logo" className="logo"/>
 
             </div>
         </div>

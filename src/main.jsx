@@ -12,8 +12,8 @@ createRoot(document.getElementById('root')).render(
           <Header />
           <main>
               <Routes>
-                  <Route path="/" element={<Maize />} />
-                  <Route path="/soybeans" element={<Soybeans />} />
+                  <Route path="/Parity-Calculator/" element={<Maize />} />
+                  <Route path="/Parity-Calculator/soybeans" element={<Soybeans />} />
               </Routes>
           </main>
       </BrowserRouter>
